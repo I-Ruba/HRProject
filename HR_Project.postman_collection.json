@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "be3adb3f-7016-4449-b38c-e9235adf26d5",
+		"name": "HR_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25624635"
+	},
+	"item": [
+		{
+			"name": "HR_Admins_Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n//correct Data\n{\n    \"username\":\"Admin\",\n    \"password\":\"Admin@Admin\"\n}\n\n//Incorrect Data\n// {\n//     \"username\":\"Admin\",\n//     \"password\":\"Admidmin\"\n// }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/hradmin/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"hradmin",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HR_Admins_Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Ahmad\",\n    \"password\":\"012345\",\n    \"email\":\"Ahmad@tuwaiq.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/hradmin/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"hradmin",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_New_staff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Ruba\",\n    \"age\": 33,\n    \"degree\":\"Bachelor\",\n    \"role\":\"Developer\",\n    \"Salary\":\"30000\",\n    \"user_id\":\"7f8e91db-526f-4774-b621-c2377608d473\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/staff/addstaff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"staff",
+						"addstaff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Staff",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/staff/DeleteStaff/76935919-d88c-409b-8962-bb22a6ad5345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"staff",
+						"DeleteStaff",
+						"76935919-d88c-409b-8962-bb22a6ad5345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Staff_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/staff/GetStaffwithId/7f8e91db-526f-4774-b621-c2377608d473",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"staff",
+						"GetStaffwithId",
+						"7f8e91db-526f-4774-b621-c2377608d473"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_staff_info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Munira\",\n    \"age\": 45,\n    \"degree\":\"Master\",\n    \"role\":\"Analysis\",\n    \"Salary\":\"30000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/staff/updeteStaff/5023b312-ed59-4230-9de1-510b61defa07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"staff",
+						"updeteStaff",
+						"5023b312-ed59-4230-9de1-510b61defa07"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
